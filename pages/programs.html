@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Programs - Horizon University</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/programs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    .page-banner {
+      height: 300px;
+      background-image: url('https://images.pexels.com/photos/8199562/pexels-photo-8199562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    
+    .page-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.8));
+      z-index: 1;
+    }
+    
+    .page-title {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+    }
+    
+    .program-categories {
+      padding: var(--space-xl) 0;
+    }
+    
+    .category-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .category-header {
+      margin-bottom: var(--space-md);
+      border-bottom: 2px solid var(--color-secondary);
+      padding-bottom: var(--space-xs);
+    }
+  </style>
+</head>
+<body>
+  <header id="header" class="header scrolled">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="../index.html">
+            <h1>Horizon <span>University</span></h1>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-links">
+            <li class="nav-item has-dropdown">
+              <a href="#">Academics</a>
+              <ul class="dropdown">
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="research.html">Research</a></li>
+              </ul>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Campus Life</a>
+              <ul class="dropdown">
+                <li><a href="housing.html">Housing</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="activities.html">Activities</a></li>
+              </ul>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#">Admissions</a>
+              <ul class="dropdown">
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="tuition.html">Tuition & Aid</a></li>
+                <li><a href="visit.html">Visit</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="news.html">News</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+            <li class="nav-item nav-cta"><a href="apply.html">Apply Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-banner">
+    <div class="page-title">
+      <h1>Academic Programs</h1>
+      <p>Discover the right program to achieve your goals</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="program-filter-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Find Your Program</h2>
+          <p>Browse our comprehensive selection of academic programs</p>
+        </div>
+        <div class="program-filter">
+          <button class="filter-btn active" data-filter="all">All Programs</button>
+          <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
+          <button class="filter-btn" data-filter="graduate">Graduate</button>
+          <button class="filter-btn" data-filter="doctoral">Doctoral</button>
+          <button class="filter-btn" data-filter="certificate">Certificate</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-categories">
+      <div class="container">
+        <div class="category-section">
+          <h2 class="category-header">Arts & Humanities</h2>
+          <div class="programs-grid">
+            <div class="program-card" data-category="undergraduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h3>English Literature</h3>
+              <p>Explore literary works and develop critical thinking and writing skills.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="graduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+              </div>
+              <h3>Philosophy</h3>
+              <p>Engage with complex ideas and develop analytical and critical thinking skills.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="undergraduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </div>
+              <h3>Music Performance</h3>
+              <p>Develop musical talents and performance skills with expert instruction.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-header">Business & Economics</h2>
+          <div class="programs-grid">
+            <div class="program-card" data-category="undergraduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+              </div>
+              <h3>Business Administration</h3>
+              <p>Learn fundamental business principles and develop management skills.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="graduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+              </div>
+              <h3>Finance</h3>
+              <p>Develop expertise in financial analysis, investment strategies, and risk management.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="doctoral">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+              <h3>Economics</h3>
+              <p>Study economic theories, policies, and their impact on society and markets.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="certificate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <h3>Project Management</h3>
+              <p>Learn essential skills to effectively plan, execute, and complete projects.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-header">Science & Engineering</h2>
+          <div class="programs-grid">
+            <div class="program-card" data-category="undergraduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h.01"/><path d="M9 2V8h1"/></svg>
+              </div>
+              <h3>Biology</h3>
+              <p>Study living organisms from cellular to ecosystem levels with lab and field experiences.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="undergraduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flask-conical"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
+              </div>
+              <h3>Chemistry</h3>
+              <p>Explore chemical principles and their applications with extensive laboratory work.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="graduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Computer Science</h3>
+              <p>Develop programming skills and understand computing theory and applications.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="doctoral">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.04.02-7.04-4.5-11.56-4.5-4.5-9.52-6.54-11.56-4.5-2.04 2.04-.02 7.04 4.5 11.56 4.52 4.52 9.52 6.54 11.56 4.5Z"/><path d="M15.7 15.7c4.52-4.52 6.54-9.52 4.5-11.56-2.04-2.04-7.04-.02-11.56 4.5-4.5 4.52-6.54 9.52-4.5 11.56 2.04 2.04 7.04.02 11.56-4.5Z"/></svg>
+              </div>
+              <h3>Physics</h3>
+              <p>Study the fundamental laws of nature from subatomic particles to the cosmos.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-header">Social Sciences</h2>
+          <div class="programs-grid">
+            <div class="program-card" data-category="undergraduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+              </div>
+              <h3>Psychology</h3>
+              <p>Understand human behavior, cognition, and mental processes.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="graduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+              </div>
+              <h3>International Relations</h3>
+              <p>Study global politics, diplomacy, and cross-cultural interactions.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+            <div class="program-card" data-category="undergraduate">
+              <div class="program-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3>Sociology</h3>
+              <p>Analyze social relationships, institutions, and the structure of human society.</p>
+              <a href="#" class="program-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Begin Your Academic Journey?</h2>
+          <p>Contact our admissions team to learn more about application requirements and deadlines.</p>
+          <div class="cta-buttons">
+            <a href="apply.html" class="btn btn-primary">Apply Now</a>
+            <a href="contact.html" class="btn btn-outline">Contact Admissions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <h2>Horizon University</h2>
+          </div>
+          <p>123 University Avenue<br>Anytown, ST 12345</p>
+          <p>Phone: (123) 456-7890<br>Email: info@horizonuniversity.edu</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Academics</h3>
+            <ul>
+              <li><a href="#">Undergraduate Programs</a></li>
+              <li><a href="#">Graduate Programs</a></li>
+              <li><a href="#">Online Learning</a></li>
+              <li><a href="#">Research Opportunities</a></li>
+              <li><a href="#">Academic Calendar</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Campus Life</h3>
+            <ul>
+              <li><a href="#">Housing</a></li>
+              <li><a href="#">Dining</a></li>
+              <li><a href="#">Athletics</a></li>
+              <li><a href="#">Student Organizations</a></li>
+              <li><a href="#">Health & Wellness</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Career Center</a></li>
+              <li><a href="#">Financial Aid</a></li>
+              <li><a href="#">IT Support</a></li>
+              <li><a href="#">Campus Safety</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Horizon University. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/programs.js"></script>
+</body>
+</html>

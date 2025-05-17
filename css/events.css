@@ -1,0 +1,219 @@
+/* Events Section */
+.events {
+  background-color: white;
+  padding: var(--space-xl) 0;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.event-card {
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  display: flex;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.event-date {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  text-align: center;
+}
+
+.event-date .day {
+  font-size: var(--font-size-xxxl);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.event-details {
+  padding: var(--space-md);
+  flex: 1;
+}
+
+.event-details h3 {
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary);
+}
+
+.event-time, .event-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-medium);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.event-details p {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-medium);
+}
+
+.event-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.event-link::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width var(--transition-fast);
+  margin-left: 0.5rem;
+}
+
+.event-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.event-link:hover::after {
+  width: 1.5rem;
+}
+
+.events-cta {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+/* News Section */
+.news {
+  background-color: var(--color-background-light);
+  padding: var(--space-xl) 0;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.news-card {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.news-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: var(--space-md);
+}
+
+.news-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.news-content h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary);
+}
+
+.news-content p {
+  color: var(--color-text-medium);
+  margin-bottom: var(--space-sm);
+}
+
+.news-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.news-link::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width var(--transition-fast);
+  margin-left: 0.5rem;
+}
+
+.news-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.news-link:hover::after {
+  width: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .events-grid, .news-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .event-card {
+    flex-direction: column;
+  }
+  
+  .event-date {
+    flex-direction: row;
+    padding: var(--space-xs);
+    min-width: unset;
+    gap: var(--space-xs);
+  }
+  
+  .event-date .day {
+    font-size: var(--font-size-xl);
+  }
+}

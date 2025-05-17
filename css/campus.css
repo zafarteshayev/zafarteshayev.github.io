@@ -1,0 +1,242 @@
+/* Campus Life Section */
+.campus-life {
+  padding: var(--space-xl) 0;
+  background-color: white;
+}
+
+.campus-slider {
+  position: relative;
+  margin-bottom: var(--space-md);
+  height: 500px;
+  overflow: hidden;
+}
+
+.campus-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.campus-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 5;
+}
+
+.campus-slide.prev {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.campus-image {
+  flex: 1;
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.campus-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  z-index: 2;
+}
+
+.campus-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campus-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-lg);
+  color: white;
+  z-index: 3;
+}
+
+.campus-info h3 {
+  color: white;
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-xl);
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-background-dark);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-dot.active {
+  background-color: var(--color-primary);
+  transform: scale(1.2);
+}
+
+.slider-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-arrow:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: var(--color-background-light);
+  padding: var(--space-xl) 0;
+}
+
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  margin-bottom: var(--space-md);
+}
+
+.testimonial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+
+.testimonial.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonial-content {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: 0;
+  left: var(--space-sm);
+  font-size: 100px;
+  line-height: 1;
+  color: var(--color-secondary);
+  opacity: 0.2;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  color: var(--color-text-medium);
+  position: relative;
+  z-index: 1;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.testimonial-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-secondary);
+}
+
+.author-info h4 {
+  margin-bottom: 0;
+  font-size: var(--font-size-md);
+}
+
+.author-info p {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  font-style: normal;
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.testimonial-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-background-dark);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.testimonial-dot.active {
+  background-color: var(--color-primary);
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .campus-slider {
+    height: 400px;
+  }
+  
+  .campus-info {
+    padding: var(--space-md);
+  }
+  
+  .testimonial-content {
+    padding: var(--space-md);
+  }
+}
